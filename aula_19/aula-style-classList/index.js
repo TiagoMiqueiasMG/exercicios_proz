@@ -17,3 +17,9 @@ console.log(inputStyle);
 inputStyle[0].style.backgroundColor = "red";
 inputStyle[1].style.background= "blue";
 
+
+inputStyle.forEach((element) => {
+    element.classList.add("visible");
+})
+
+console.log(inputStyle);
