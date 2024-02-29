@@ -2,13 +2,15 @@ let quantidadeSubtotal = document.getElementById("quantidade-subtotal");
 let valorSubtotal = document.getElementById("valor-subtotal");
 
 let subtotalInfo = {
-  quantidade: 1,
+  quantidade: 0,
   valor: 11.66,
 };
 
 let btnAdicionarProduto = document.querySelector('#btn-adicionar-produto-01')
 let btnRemoverProduto = document.querySelector("#btn-subtrair-produto-01");
 let qtdProduto = document.querySelector("#quantidade-produto-01");
+
+
 
 function atualizarSubtotal(){
   quantidadeSubtotal.innerText = 
@@ -33,3 +35,13 @@ function subtrairProduto() {
   }  
 }
 btnRemoverProduto.addEventListener("click", subtrairProduto);
+
+qtdProduto.addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    let quantidade = Number(qtdProduto.value);
+    subtotalInfo.quantidade = quantidade;
+    atualizarSubtotal();
+  }
+});
+
+
