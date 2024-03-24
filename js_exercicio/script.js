@@ -3,3 +3,5 @@ function imprimirMensagem() {
 }
 
 imprimirMensagem();
+imprimirMensagem();
+imprimirMensagem();
